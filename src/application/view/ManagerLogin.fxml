@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.ManagerLoginController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: steelblue;">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="160.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Login to Manager Account" textFill="#860000">
+                     <font>
+                        <Font name="Times New Roman" size="36.0" />
+                     </font></Label>
+                  <Label fx:id="warningLabel" alignment="TOP_CENTER" prefHeight="115.0" prefWidth="494.0" text="To create a new account, enter your desired username and password, then click New Account" textAlignment="CENTER" textFill="#005111" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="267.0" prefWidth="412.0">
+               <children>
+                  <Label prefHeight="239.0" prefWidth="343.0" text="Enter your username and password, the hit enter." wrapText="true">
+                     <font>
+                        <Font name="Times New Roman" size="24.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#a10000" />
+                              <Stop color="#156e01" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill></Label>
+                  <TextField fx:id="usernameField" prefHeight="27.0" prefWidth="542.0" promptText="Username" />
+                  <PasswordField fx:id="passwordField" promptText="password" />
+                  <HBox alignment="TOP_CENTER" spacing="100.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#newAccount" prefHeight="45.0" prefWidth="140.0" text="New Account">
+                           <font>
+                              <Font name="Apple SD Gothic Neo Regular" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#handle" prefHeight="46.0" prefWidth="140.0" text="Login">
+                           <font>
+                              <Font name="Apple SD Gothic Neo Regular" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#previousScreen" style="-fx-background-color: darkgoldenrod;" text="Back">
+         <font>
+            <Font size="22.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
